@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muunt</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+        :root{
+            --color-beige: #f9f8dc;
+            --color-field: #6E4D1A;
+            --color-earth: #EFAC50;
+            --color-vanilla: #FEF4AB;
+            --color-pink: #FFE3F1;
+            --font-size-lg: 4rem;
+            --font-size-md: 2.5rem;
+            --font-size-sm: 1.5rem;
+            --font-family: "DynaPuff", system-ui;
+        }
+
+        body{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--color-pink);
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            background-color: var(--color-earth);
+            padding: 0 1rem 0 1rem;
+            box-sizing: border-box;
+            font-size: var(--font-size-sm);
+            font-family: var(--font-family);
+        }
+        header nav{
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        header ul{
+            list-style: none;
+        }
+        header a{
+            text-decoration: none;
+            color: var(--color-pink);
+        }
+
+        main{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 3rem 0 0 0;
+        }
+
+        main section:first-child{
+            width: 90%;
+            height: 70vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-image: url("assets/muunt-oat-milk.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0 0 0 3rem;
+            border: solid 1rem var(--color-earth);
+            border-radius: 1rem;
+        }
+
+        main section:first-child h1{
+            font-size: var(--font-size-md);
+            font-family: var(--font-family);
+            color: var(--color-field);
+        }
+
+        main section:last-child{
+            width: 90%;
+            height: 70vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 3rem 0 0 0;
+            
+        }
+
+        main section:last-child .div_producto{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border: solid 0.5rem var(--color-field);
+            border-radius: 1rem;
+            color: var(--color-field);
+            font-family: var(--font-family);
+
+        }
+
+        main section:last-child .div_producto_img{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main section:last-child .div_producto_img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        main section:last-child .div_producto_info{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 0 0 2rem;
+        }
+
+        main section:last-child .div_producto_info h2{
+            text-decoration: none;
+            font-size: var(--font-size-md);
+        }
+
+        main section:last-child .div_producto_2{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            border: solid 0.5rem var(--color-field);
+            border-radius: 1rem;
+            color: var(--color-field);
+            font-family: var(--font-family);
+
+        }
+
+        main section:last-child .div_producto_2_img{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main section:last-child .div_producto_2_img img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        main section:last-child .div_producto_2_info{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 0 0 2rem;
+        }
+
+        main section:last-child .div_producto_2_info h2{
+            text-decoration: none;
+            font-size: var(--font-size-md);
+        }
+
+        .nosotros{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3rem;
+            box-sizing: border-box;
+        }
+
+        .nosotros h1{
+            text-decoration: none;
+            font-size: var(--font-size-lg);
+            font-family: var(--font-family);
+            color: var(--color-field);
+        }
+
+        .nosotros h2{
+            text-decoration: none;
+            font-size: var(--font-size-md);
+            font-family: var(--font-family);
+            color: var(--color-field);
+        }
+
+        .nosotros span{
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            font-family: var(--font-family);
+            color: var(--color-field);
+        }
+
+        .nosotros button{
+            width: 30%;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-beige);
+            font-size: var(--color-earth);
+            color: #6E4D1A;
+            font-family: var(--font-family);
+            border: solid 1px var(--color-earth);
+            border-radius: 1rem;
+            margin: 1rem 0 0 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <a href="">Inicio</a>
+            </ul>
+            <ul>
+                <a href="">Productos&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;</a>
+                <a href="">Nosotros</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <section>
+                    <div>
+                        <h1>¡Atención, amantes de <br>la leche de avena!</h1>
+                    </div>
+            </section>
+            <section>
+                <div class="div_producto">
+                    <div class="div_producto_img">
+                        <img src="./assets/WhatsApp Image 2025-03-02 at 9.11.37 PM.jpeg" alt="">
+                    </div>
+                    <div class="div_producto_info">
+                        <h2>
+                            Nuevo sabor
+                        </h2>
+                        <span>
+                            ¡Prepárate para una explosión de sabor! Llegan dos nuevas e irresistibles opciones a nuestra línea de helados, creadas para conquistar tu paladar.
+                        </span>
+                    </div>
+                </div>
+                <div class="div_producto_2">
+                    <div class="div_producto_2_img">
+                        <img src="./assets/WhatsApp Image 2025-03-02 at 9.11.42 PM.jpeg" alt="">
+                    </div>
+                    <div class="div_producto_2_info">
+                        <h2>
+                            Nuevas leches avena y almendra
+                        </h2>
+                        <span>
+                            ¡Para los amantes de la naturaleza ! Muunt presenta sus nuevas leches!
+                        </span>
+                    </div>
+                </div>
+                
+            </section>
+            
+    </main>
+    <div class="nosotros">
+        <h1>Sobre nosotros</h1>
+        <span>En Muunt, creemos que una alimentación saludable comienza con ingredientes puros y procesos naturales. Nos dedicamos a ofrecer leches vegetales de almendra, trigo y avena, elaboradas sin conservadores, sin azúcares añadidos y con el equilibrio perfecto entre sabor y nutrición.</span>
+        <h2>Nuestra Misión</h2>
+        <span>Queremos revolucionar la manera en que disfrutas las bebidas vegetales, ofreciendo una alternativa saludable, sostenible y deliciosa. Nos enfocamos en brindarte opciones que cuiden de tu bienestar sin comprometer el sabor ni la calidad.</span>
+        <h2>Nuestra Visión</h2>
+        <span>Ser la marca de referencia en bebidas vegetales en Mexico, ofreciendo productos innovadores, accesibles y amigables con el medio ambiente.</span>
+        <button id="button_ir_formulario">¿Quieres ganar una promoxion?</button>
+    </div>
+
+    <script>
+        let button_ir_formulario = document.getElementById("button_ir_formulario")
+
+        button_ir_formulario.addEventListener("click", ir_formulario)
+
+        function ir_formulario(){
+            window.location.href = 'form.html'
+        }
+    </script>
+</body>
+</html>
